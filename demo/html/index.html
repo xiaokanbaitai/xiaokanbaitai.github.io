@@ -99,9 +99,15 @@
         <!-- <EMBED src="ok.avi" width=240 height=220 type=audio/mpeg ALLOWSCRIPTACCESS="samedomain" LOOP="flase" AUTOSTART="ture"> -->
         <!-- <iframe src="./mp3/魏雪漫 - 定制爱情.mp3" name="施梦婷" width="0" height="0" frameborder="0" scrolling="no"></iframe> -->
     <!-- <embed autoplay="true" src="./mp3/魏雪漫 - 定制爱情.mp3" width="0" height="0" /> -->
-    <video src="./mp4/任贤齐张柏芝16年后，再次合唱《心语心愿》，太感人！-_高清.mp4" autoplay="autoplay" width="160" height="120" loop="loop"	>
+    <video id="video" src="./mp4/任贤齐张柏芝16年后，再次合唱《心语心愿》，太感人！-_高清.mp4"  autoplay="autoplay" width="160" height="120" loop="loop"	>
         您的浏览器不支持 video 标签。
         </video>
+        <div id="mask">
+            <div class="pop-container">
+              <p>页面内有自动播放视频 请注意流量</p>
+              <button onclick="playVideo()">我知道了</button>
+            </div>
+          </div>
     <!-- <audio src="https://y.qq.com/portal/player.html" autoplay loop></audio> -->
     <svg id="theSvg" viewBox="-120 -30 240 180" enable-background="new 0 0 174 148" xml:space="preserve">
         <defs>
@@ -155,7 +161,11 @@
                 pic2.style.display = "none"              
             }, 11000)
         }
-
+        function playVideo() {
+    document.getElementById('mask').style.display = 'none';
+    var video = document.querySelector('#video');
+    video.play();
+  }
         let rid = null; // request animation id
         const SVG_NS = "http://www.w3.org/2000/svg";
         const pathlength = shape.getTotalLength();
