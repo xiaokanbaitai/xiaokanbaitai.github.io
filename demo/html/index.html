@@ -102,12 +102,12 @@
     <video id="video" src="./mp4/任贤齐张柏芝16年后，再次合唱《心语心愿》，太感人！-_高清.mp4"  autoplay="autoplay" width="160" height="120" loop="loop"	>
         您的浏览器不支持 video 标签。
         </video>
-        <div id="mask">
+        <!-- <div id="mask">
             <div class="pop-container">
               <p>页面内有自动播放视频 请注意流量</p>
               <button onclick="playVideo()">我知道了</button>
             </div>
-          </div>
+          </div> -->
     <!-- <audio src="https://y.qq.com/portal/player.html" autoplay loop></audio> -->
     <svg id="theSvg" viewBox="-120 -30 240 180" enable-background="new 0 0 174 148" xml:space="preserve">
         <defs>
@@ -151,6 +151,11 @@
         var pic = document.getElementById('pic');
         var pic2 = document.getElementById('pic2');
         var msg = document.getElementById('msg')
+//         function playVideo() {
+//     document.getElementById('mask').style.display = 'none';
+//     var video = document.querySelector('#video');
+//     video.play();
+//   }
 
         window.onload = function () {
             pic2.style.display = "block"
@@ -161,11 +166,7 @@
                 pic2.style.display = "none"              
             }, 11000)
         }
-        function playVideo() {
-    document.getElementById('mask').style.display = 'none';
-    var video = document.querySelector('#video');
-    video.play();
-  }
+
         let rid = null; // request animation id
         const SVG_NS = "http://www.w3.org/2000/svg";
         const pathlength = shape.getTotalLength();
