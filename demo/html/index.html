@@ -63,6 +63,16 @@
             width: 20%;
             border-radius: 50%;
         }
+        
+        #pic2 {
+            display: none;
+            position: absolute;
+            left: 50%;
+            top: 50%;
+            transform: translate(-50%, -50%);
+            width: 20%;
+            border-radius: 50%;
+        }
 
         #msg {
             display: none;
@@ -123,17 +133,21 @@
     </div>
 
     <img src="./img/mm.jpg" alt="" id="pic">
+    <img src="./img/mmw.jpg" alt="" id="pic2">
     <script>
 
         var tip = document.getElementById('tip');
         var pic = document.getElementById('pic');
+        var pic2 = document.getElementById('pic2');
         var msg = document.getElementById('msg')
 
         window.onload = function () {
+            pic2.style.display = "block"
             setInterval(function () {
                 msg.style.display = 'block';
                 tip.style.display = 'block';
                 pic.style.display = 'block';
+                pic2.style.display = "none"              
             }, 11000)
         }
 
